@@ -89,29 +89,6 @@
         </section>
     </div>
 
-    <script>
-        // Theme switcher functionality
-        const themeSwitch = document.querySelector('.theme-switch');
-        const htmlElement = document.documentElement;
-        const moonIcon = '<i class="fas fa-moon"></i>';
-        const sunIcon = '<i class="fas fa-sun"></i>';
-
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        htmlElement.setAttribute('data-theme', savedTheme);
-        themeSwitch.innerHTML = savedTheme === 'dark' ? moonIcon : sunIcon;
-
-        // Theme switch handler
-        themeSwitch.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            htmlElement.setAttribute('data-theme', newTheme);
-            themeSwitch.innerHTML = newTheme === 'dark' ? moonIcon : sunIcon;
-            
-            // Save theme preference
-            localStorage.setItem('theme', newTheme);
-        });
-    </script>
+  
 </body>
 </html>
