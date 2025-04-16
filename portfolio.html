@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentino Elmazaj - Web Developer & Security Researcher</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        /* Theme variables */
+        html[data-theme="dark"] {
+            --bg-color: #111827;
+            --text-color: #fff;
+            --text-secondary: #d1d5db;
+            --border-color: #374151;
+            --card-bg: #1f2937;
+            --button-bg: #fff;
+            --button-text: #111827;
+            --button-hover: #e5e7eb;
+        }
+
+        html[data-theme="light"] {
+            --bg-color: #ffffff;
+            --text-color: #111827;
+            --text-secondary: #4b5563;
+            --border-color: #e5e7eb;
+            --card-bg: #f9fafb;
+            --button-bg: #111827;
+            --button-text: #fff;
+            --button-hover: #374151;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Theme switcher */
+        .theme-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .theme-switch:hover {
+            transform: scale(1.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Hero section */
+        .hero {
+            padding: 5rem 0;
+        }
+
+        .hero-image-container {
+            position: relative;
+            margin-bottom: 3rem;
+            height: 400px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        /* Expertise section */
+        .expertise {
+            padding: 4rem 0;
+        }
+
+        .expertise h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+        }
+
+        .expertise-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .expertise-list {
+            list-style: none;
+        }
+
+        .expertise-list li {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .expertise-list i {
+            margin-right: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .expertise-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switch Button -->
+    <button class="theme-switch" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image-container">
+                <img 
+                    src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    alt="Silhouette of person working on computer in dark room"
+                    class="hero-image"
+                >
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Valentino Elmazaj</h1>
+                <p>
+                    Passionate Web Developer and Security Researcher specializing in
+                    creating secure, scalable web applications and conducting
+                    penetration testing to identify vulnerabilities.
+                </p>
+                <a href="#" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="expertise">
+            <h2>Technical Expertise</h2>
+            <div class="expertise-grid">
+                <!-- Web Development Card -->
+                <div class="expertise-card">
+                    <h3>Web Development</h3>
+                    <ul class="expertise-list">
+                        <li>
+                            <i class="fas fa-code"></i>
+                            Frontend Development (React, Vue, Angular)
+                        </li>
+                        <li>
+                            <i class="fas fa-server"></i>
+                            Backend Development (Node.js, Python)
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            Database Management
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            Responsive Design
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Security Card -->
+                <div class="expertise-card">
+                    <h3>Security & Pentesting</h3>
+                    <ul class="expertise-list">
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            Vulnerability Assessment
+                        </li>
+                        <li>
+                            <i class="fas fa-bug"></i>
+                            Exploit Development
+                        </li>
+                        <li>
+                            <i class="fas fa-lock"></i>
+                            Security Auditing
+                        </li>
+                        <li>
+                            <i class="fas fa-network-wired"></i>
+                            Network Security
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Theme switcher functionality
+        const themeSwitch = document.querySelector('.theme-switch');
+        const htmlElement = document.documentElement;
+        const moonIcon = '<i class="fas fa-moon"></i>';
+        const sunIcon = '<i class="fas fa-sun"></i>';
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        themeSwitch.innerHTML = savedTheme === 'dark' ? moonIcon : sunIcon;
+
+        // Theme switch handler
+        themeSwitch.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            themeSwitch.innerHTML = newTheme === 'dark' ? moonIcon : sunIcon;
+            
+            // Save theme preference
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>
