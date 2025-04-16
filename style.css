@@ -1,13 +1,11 @@
 
-        /* Reset and base styles */
-        * {
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
-        /* Theme variables */
         html[data-theme="dark"] {
             --bg-color: #111827;
             --text-color: #fff;
@@ -56,14 +54,12 @@
             transform: scale(1.1);
         }
 
-        /* Container styles */
         .container {
             max-width: 1152px;
             margin: 0 auto;
             padding: 1rem;
         }
 
-        /* Hero section */
         .hero {
             padding: 5rem 0;
         }
@@ -118,7 +114,6 @@
             background-color: var(--button-hover);
         }
 
-        /* Expertise section */
         .expertise {
             padding: 4rem 0;
         }
@@ -166,7 +161,6 @@
             color: var(--text-secondary);
         }
 
-        /* Responsive design */
         @media (min-width: 768px) {
             .expertise-grid {
                 grid-template-columns: 1fr 1fr;
